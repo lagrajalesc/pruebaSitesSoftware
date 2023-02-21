@@ -39,7 +39,4 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('chat/with/{user}', 'App\Http\Controllers\ChatController@chatWith');
-Route::get('chat/{chat}', 'App\Http\Controllers\ChatController@show');
-Route::post('messageSent', [MessageController::class, 'messageSent']);
 Route::get('users', 'App\Http\Controllers\ChatController@users');

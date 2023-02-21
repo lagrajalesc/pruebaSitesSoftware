@@ -52,7 +52,7 @@ class ChatController extends Controller
                 if($chat[$i]->chat_id = $chat1[$j]->chat_id){
                     
                     $chat = DB::table('messages')
-                    ->select('messages.content','users.name',)
+                    ->select('messages.content','users.name', 'messages.chat_id') 
                     ->join('users','messages.user_id', '=', 'users.id')
                     ->where('messages.chat_id', '=', $chat[$i]->chat_id)
                     ->get();
